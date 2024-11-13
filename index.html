@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресы За Творчество</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+<body>
+    <img src="img/thumbnail.jpg" alt="РЕСЫ ЗА ТВОРЧЕСТВО" class="thumbnail__img">
+
+    <button class="rzt-btn">
+        <a href="index2.html" title="Оценки Риса За Творчество"><h1>90</h1></a>
+    </button>
+    
+    <div class="container">
+        <div class="main-sliders">
+            <div class="sliders-first">
+                <div class="slider_div">
+                    <label for="slider1">1. Количество<span class="label-description">относительно длительности альбома</span><span class="value" id="value1">5</span></label>
+                    <input type="range" id="slider1" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+        
+                <div class="slider_div">
+                    <label for="slider2">2. Редкось/Сложность Добычи<span class="value" id="value2">5</span></label>
+                    <input type="range" id="slider2" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+            </div>
+            
+            <div class="sliders-second">
+                <div class="slider_div">
+                    <label for="slider3">3. Полезность/Использование<span class="value" id="value3">5</span></label>
+                    <input type="range" id="slider3" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+        
+                <div class="slider_div">
+                    <label for="slider4">4. Ценность в торговле<span class="value" id="value4">5</span></label>
+                    <input type="range" id="slider4" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_alone">
+            <label for="slider5">5. Угарность/Интересность/Необычность/Фишка<span class="value" id="value5">5</span></label>
+            <input type="range" id="slider5" class="slider" min="0" max="10" value="5" step="1">
+        </div>
+
+        <div class="general-score">
+            <div class="checkbox"><i class="ri-checkbox-circle-fill checkbox_circle"></i></div>
+            <span id="total"></span>
+            <h2>/50</h2>
+            <p class="total-values">5 5 5 5 5</p>
+        </div>
+    </div>
+
+    <div class="page-list">
+        <h1>Последние оценки</h1>
+        <div class="page__item">
+            <img src="img/bm24.png" class="page__img">
+            <div class="page__info">
+                <h1 class="page__title">BM24</h1>
+                <h3 class="page__author">THRILL PILL</h4>
+                <div class="page__score__info">
+                    <p class="page__score">34</p>
+                    <p class="page__values">6 9 7 3 9</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="glow"></div>
+
+    <script src="src_js/01_index.js"></script>
+</body>
+</html>

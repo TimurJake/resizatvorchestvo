@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РЗТ | copy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+</head>
+<body>
+    <img src="img/thumbnail2.jpg" alt="РИСА ЗА ТВОРЧЕСТВО" class="thumbnail__img">
+
+    <button class="rzt-btn rzt2">
+        <a href="index.html" title="Оценки Ресы За Творчество"><h1>50</h1></a>
+    </button>
+    
+    <div class="container">
+        <div class="main-sliders">
+            <div class="sliders-first">
+                <div class="slider_div">
+                    <label for="slider1">1. Рифмы / Образы<span class="value" id="value1">5</span></label>
+                    <input type="range" id="slider1" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+        
+                <div class="slider_div">
+                    <label for="slider2">2. Реализация Стиля<span class="value" id="value2">5</span></label>
+                    <input type="range" id="slider2" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+            </div>
+            
+            <div class="sliders-second">
+                <div class="slider_div">
+                    <label for="slider3">3. Структура / Ритмика<span class="value" id="value3">5</span></label>
+                    <input type="range" id="slider3" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+        
+                <div class="slider_div">
+                    <label for="slider4">4. Индивидуальность / Харизма<span class="value" id="value4">5</span></label>
+                    <input type="range" id="slider4" class="slider" min="0" max="10" value="5" step="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_alone">
+            <label for="slider5">5. Атмосфера / Вайб<span class="value" id="value5">5</span></label>
+            <input type="range" id="slider5" class="slider" min="0" max="10" value="5" step="1">
+        </div>
+
+        <div class="general-score">
+            <div class="checkbox"><i class="ri-checkbox-circle-fill checkbox_circle"></i></div>
+            <span id="total"></span>
+            <h2>/90</h2>
+            <p class="total-values">5 5 5 5 5</p>
+        </div>
+    </div>
+
+    <div class="page-list">
+        <h1>Последние оценки</h1>
+        <!-- <div class="page__item">
+            <img src="img/bm24.png" class="page__img">
+            <div class="page__info">
+                <h1 class="page__title">BM24</h1>
+                <h3 class="page__author">THRILL PILL</h4>
+                <div class="page__score__info">
+                    <p class="page__score">34</p>
+                    <p class="page__values">6 9 7 3 9</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    
+    <div class="glow"></div>
+
+    <script src="src_js/02_index.js"></script>
+</body>
+</html>
