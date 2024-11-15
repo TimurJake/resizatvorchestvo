@@ -9,12 +9,7 @@ function updateValues() {
     let percent = 0;
     sliders.forEach((slider, index) => {
         values[index].textContent = slider.value;
-        // if (index == 4) {
-        //     percent = (slider.value / 10) + 1
-        //     total = (total * percent) + parseInt(slider.value)
-        // } else {
             total += parseInt(slider.value);
-        // }
     });
     totalDisplay.textContent = total;
     totalValues.innerText = `${values[0].innerText} ${values[1].innerText} ${values[2].innerText} ${values[3].innerText} ${values[4].innerText}`
