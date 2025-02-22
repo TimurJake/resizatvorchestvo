@@ -3,6 +3,17 @@ const values = document.querySelectorAll('.value')
 const totalDisplay = document.getElementById('total')
 const totalValues = document.querySelector('.total-values')
 const checkboxCircle = document.querySelector('.checkbox_circle')
+const myPageList = document.querySelector('.my-page-list')
+let pageItemsArr = []
+
+if (localStorage.getItem('pageItems') != null) {
+    pageItemsArr = (JSON.parse(localStorage.getItem('pageItems')))
+    if (Array.isArray(pageItemsArr)) {
+        pageItemsArr.forEach((item) => {
+            myPageList.insertAdjacentHTML("beforeend", item);
+        });
+    }
+}
 
 function updateValues() {
     let total = 0
@@ -66,8 +77,6 @@ document.querySelector('.general-submit').addEventListener('click', function(eve
         return;
     }
 
-    const myPageList = document.querySelector('.my-page-list')
-
     const pageItem = `
         <div class="page__item">
             <img src="${itemInfo.imgSrc}" class="page__img">
@@ -77,9 +86,13 @@ document.querySelector('.general-submit').addEventListener('click', function(eve
                 <div class="page__score__info">
                     <p class="page__score">${totalDisplay.innerText}</p>
                     <p class="page__values">${totalValues.innerText}</p>
+                    <button class="page__delete" title="Удалить Оценку" onclick="deleteBtn(this)"><i class="ri-delete-bin-5-line"></i></button>
                 </div>
             </div>
         </div>`
+    pageItemsArr.push(pageItem)
+
+    localStorage.setItem('pageItems', JSON.stringify(pageItemsArr))
     
     myPageList.insertAdjacentHTML("beforeend", pageItem)
 
@@ -94,6 +107,10 @@ document.querySelector('.general-submit').addEventListener('click', function(eve
 
     updateValues()
 });
+
+function deleteBtn(el) {
+    el.closest('.page__item').remove()
+}
 
 updateValues()
 maxTotal()

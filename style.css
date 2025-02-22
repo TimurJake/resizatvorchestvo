@@ -300,6 +300,7 @@ label {
     height: 80px;
     width: 80px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .page__info {
@@ -389,3 +390,13 @@ label {
     transform: scaleX(-1);
     border-radius: 20px;
 }
+
+.page__delete {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
